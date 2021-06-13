@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  height: 100%;
+  background: #3F51B5;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 30px;
+  transition: all 1s ease;
+}
+
+body:before {
+  position: absolute;
+  content: "Look Ma no HTML!";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  border: 5px dashed #FFF;
+}
+
+body:after{
+  position:absolute;
+  content:"";
+  top:33%;
+  left:61%;
+  transform:translate(-50%,-50%);
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#03A9F4;
+  
+}
+
+body:hover {
+  animation: random 5s infinite;
+  background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(255, 255, 255, .3) 21%, rgba(255, 255, 255, .3) 34%, transparent 35%, transparent), radial-gradient(circle at 0% 50%, transparent 20%, rgba(255, 255, 255, .3) 21%, rgba(255, 255, 255, .3) 34%, transparent 35%, transparent) 0 -50px;
+  background-color: slategray;
+  background-size: 75px 100px;
+}
+
+body:hover::after{
+  animation: random 5s infinite reverse;
+ animation: move 2s infinite alternate;
+}
+
+body:hover::before{
+  color:#212121;
+  border: 5px dashed #212121;
+}
+
+@keyframes random {
+  0% {
+    background-color: #3F51B5;
+  }
+  5% {
+    background-color: #2196F3;
+  }
+  10% {
+    background-color: #03A9F4;
+  }
+  15% {
+    background-color: #00BCD4;
+  }
+  20% {
+    background-color: #009688;
+  }
+  25% {
+    background-color: #4CAF50;
+  }
+  30% {
+    background-color: #8BC34A;
+  }
+  35% {
+    background-color: #CDDC39;
+  }
+  40% {
+    background-color: #FFEB3B;
+  }
+  45% {
+    background-color: #FFC107;
+  }
+  50% {
+    background-color: #FF9800;
+  }
+  55% {
+    background-color: #FF5722;
+  }
+  60% {
+    background-color: #795548;
+  }
+  69% {
+    background-color: #F44336;
+  }
+  77% {
+    background-color: #E91E63;
+  }
+  85% {
+    background-color: #9C27B0;
+  }
+  92% {
+    background-color: #673AB7;
+  }
+  100% {
+    background-color: #3F51B5;
+  }
+}
+
+@keyframes move {
+  from {
+    left:61%;
+  }
+  to {
+    left:39%;
+  }
+}
